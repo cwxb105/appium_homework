@@ -27,8 +27,8 @@ public class TesterhomeLoginAndLogoutTest {
 		String loginText = "登录";
 		String logoutText = "退出";
 		
-		String userName = "wmadcc";
-		String password = "wmadcc4633";
+		String userName = "username";
+		String password = "password";
 		
 		// get index page of testerhome
 		driver.get(baseUrl);
