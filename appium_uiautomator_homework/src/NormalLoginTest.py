@@ -92,6 +92,11 @@ class NormalLoginTest(unittest.TestCase):
                                     'resourceId("com.zhangdan.app:id/TextView_User_Name")').click()
         time.sleep(1.5)
         
+        screen_width = self.driver.get_window_size()['width']
+        screen_height = self.driver.get_window_size()['height']
+        self.driver.swipe(screen_width/2, screen_height*3/4, \
+                          screen_width/2, screen_height/4, 1000)
+
         self.driver.implicitly_wait(3)
         logoutTv = self.driver.find_element_by_android_uiautomator('new UiSelector().' + \
                                                 'resourceId("com.zhangdan.app:id/TextView_Exit")')
